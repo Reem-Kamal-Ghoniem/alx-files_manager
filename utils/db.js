@@ -1,4 +1,5 @@
-const { MongoClient } = require('mongodb');
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { MongoClient } from 'mongodb';
 
 const host = process.env.DB_HOST || 'localhost';
 const port = process.env.DB_PORT || 27017;
@@ -30,4 +31,4 @@ class DBClient {
 }
 
 const dbClient = new DBClient();
-module.exports = dbClient;
+export default dbClient;
